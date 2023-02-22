@@ -9,8 +9,6 @@ After make, you just need to give the sample input such as:
 
 ./phsp 5 500 1000 50 100 exponential 20
 
-
-
 The Dining Philosophers Problem: N philosophers are sitting at a round table. In the center of the table, there is a bowl of rice. Between each pair of philosopher is a single chopstick. A philosopher is in one of three states: thinking, hungry and eating. At various times a thinking philosopher gets hungry. A hungry philosopher attempts to pick up one of the adjacent chopsticks, then the other one (not both at the same time). If the philosopher is able to obtain the pair of chopsticks, then the philosopher eats for a period of time. After eating, the philosopher puts the chopsticks down and returns thinking.     
 
 In this project, you are supposed to write a program for the dining philosopher problem, which will implement a deadlock-free solution with maximum concurrency. The program should work for any number of philosophers (odd numbers, maximum 27). In the program, a thread will express a philosopher. These threads will be spawned by the main thread, which is not a philosopher. You need to use Pthreads, mutex and condition variables to synchronize. You can use monitor based solutions or semaphores that are deadlock free. The program will be named phsp and will take the following arguments: phsp <num_phsp> <min_think> <max_think> <min_dine> <max_dine> <dst> <num>
